@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "name": "Project checks",
+  "tasks": [
+    { "id": "lint", "label": "Lint", "executable": "npm", "args": ["run", "lint"], "cwd": ".", "dependsOn": [] },
+    { "id": "test", "label": "Test", "executable": "npm", "args": ["test"], "cwd": ".", "dependsOn": ["lint"] },
+    { "id": "build", "label": "Build", "executable": "npm", "args": ["run", "build"], "cwd": ".", "dependsOn": ["test"] }
+  ]
+}
